@@ -8,10 +8,11 @@
     using Models;
 
     using Microsoft.Extensions.Configuration;
+    using RestSharp;
 
     public class ClubUserDatabase(IConfiguration configuration, IMapper mapper) : IClubUserDatabase
     {
-        // TODO 8.1: Přidejte si přes dependency injection configuraci
+        // DONE 8.1: Přidejte si přes dependency injection configuraci
 
         public bool TryGetClubUser(long memberId, out PersonModel personModel)
         {
@@ -28,14 +29,17 @@
 
         private List<ClubUser> ReceiveClubUsers()
         {
-            // TODO 8.2: Naimplementujte volání endpointu ClubDB pomocí RestSharp
+            // DONE 8.2: Naimplementujte volání endpointu ClubDB pomocí RestSharp
+            var client = new RestClient(configuration["ClubUsersApi"]);
+            var request = new RestRequest("club/user");
+            var response = client.Get<List<ClubUser>>(request);
 
-            return null;
+            return response;
         }
 
         private List<PersonModel> TransformToPersonModel(IList<ClubUser> users)
         {
-            return null;
+            return mapper.Map<List<PersonModel>>(users);
         }
     }
 }

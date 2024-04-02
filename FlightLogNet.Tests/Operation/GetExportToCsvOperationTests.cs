@@ -1,22 +1,33 @@
 namespace FlightLogNet.Tests.Operation
 {
+    using System;
+    using System.IO;
     using FlightLogNet.Operation;
 
     using Xunit;
+    using Microsoft.Extensions.Configuration;
 
-    public class GetExportToCsvOperationTests(GetExportToCsvOperation getExportToCsvOperation)
+    public class GetExportToCsvOperationTests(GetExportToCsvOperation getExportToCsvOperation, IConfiguration configuration)
     {
-        // TODO 6.1: Odstraòtì skip a doplntì test, aby otestoval vrácený CSV soubor.
-        [Fact(Skip = "Not implemented.")]
+        // DONE 6.1: Odstraï¿½tï¿½ skip a doplntï¿½ test, aby otestoval vrï¿½cenï¿½ CSV soubor.
+        [Fact]
         public void Execute_StateUnderTest_ExpectedBehavior()
         {
             // Arrange
+            TestDatabaseGenerator.DeleteOldDatabase(configuration);
+            DateTime fixedDate = new DateTime(2024, 3, 26, 19, 52, 38);
+            TestDatabaseGenerator.CreateTestDatabaseWithFixedTime(fixedDate, configuration);
+
+            // open csv and read bytes
+            var expectedCsv = File.ReadAllText("export.csv");
+            // convert this to bytes[]
+            var expectedCsvBytes = System.Text.Encoding.UTF8.GetBytes(expectedCsv);
 
             // Act
             var result = getExportToCsvOperation.Execute();
 
             // Assert
-            //Assert.Equal(expectedCsv, result);
+            Assert.Equal(expectedCsvBytes, result);
         }
     }
 }

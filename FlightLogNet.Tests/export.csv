@@ -1,6 +1,6 @@
-﻿FlightId,TakeoffTime,Immatriculation,Copilot,Task,TowplaneID
-444,07.01.2020 16:47:10,07.01.2020,OK-B123,L-13A Blaník,Lenka Kiasová, ,Tahac,444,
-1,02.01.2020 16:47:10,,OK-V23424,Lenka Kiasová, ,VLEK,4,1
-4,02.01.2020 16:47:10,,OK-B123,L-13A Blaník, ,Tahac,4,1
-24057,02.01.2020 15:17:10,,OK-V23424,Petr Hrubec, ,VLEK,24058
-24058,02.01.2020 15:17:10,L-13A Blaník,Silvie Hronová, ,Tahac,24058,24057
+﻿Id,TakeoffTime,LandingTime,Airplane,Pilot,Copilot,Task
+1,26.03.2024 19:42:38,,OK-V23428,Lenka Kiasová,,VLEK
+4,26.03.2024 19:42:38,,OK-B128,Silvie Hronová,,Tahac
+444,07.01.2020 16:47:10,07.01.2020 17:17:10,OK-B128,Lenka Kiasová,,Tahac
+24057,26.03.2024 18:12:38,,OK-V23428,Petr Hrubec,,VLEK
+24058,26.03.2024 18:12:38,,OK-B128,Silvie Hronová,,Tahac

@@ -69,14 +69,32 @@ namespace FlightLogNet.Tests.Operation
         [Fact]
         public void Execute_ShouldCreateNewClubMember()
         {
-            // Arrange
+            // DONE 7.1: Naimplementujte test s pouï¿½itï¿½m mockï¿½
+            var createPersonOperation = CreateCreatePersonOperation();
+            PersonModel personModel = new PersonModel
+            {
+                Address = new AddressModel { City = "NY", PostalCode = "456", Street = "2nd Ev", Country = "USA" },
+                FirstName = "John",
+                LastName = "Smith",
+                MemberId = 1
+            };
 
-            // TODO 7.1: Naimplementujte test s použitím mockù
+            long id;
+            PersonModel returnedPersonModel = personModel;
+            const long expectedId = 1;
+
+            this.mockPersonRepository.Setup(repository => repository.TryGetPerson(personModel, out id)).Returns(false);
+
+            this.mockClubUserDatabase.Setup(repository => repository.TryGetClubUser(expectedId, out returnedPersonModel)).Returns(true);
+
+            this.mockPersonRepository.Setup(repository => repository.CreateClubMember(personModel)).Returns(expectedId);
 
             // Act
+            var result = createPersonOperation.Execute(personModel);
 
             // Assert
-
+            Assert.Equal(expectedId, result);
+            this.mockRepository.VerifyAll();
         }
     }
 }

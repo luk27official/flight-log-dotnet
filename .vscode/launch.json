@@ -19,7 +19,7 @@
             },
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development",
-                "applicationUrl": "http://+:44313"
+                "ASPNETCORE_URLS": "http://+:44313"
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"

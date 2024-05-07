@@ -37,3 +37,7 @@ Na obrazovce Nový let může uživatel zadat odlet letadla. Je nutné vyplnit �
 Na obrazovce Report uživatel vidí přehled všech letů, které byly do systému zadány. Může také tato data vyexportovat ve formátu CSV.
 
 <img src="img/report.png" />
+
+### RFC (Request For Change)
+
+Požadavky na změny v projektu jsou pojmenovány `rfc_<číslo_požadavku>`.

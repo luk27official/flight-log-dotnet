@@ -11,7 +11,7 @@ permissions:
 
 jobs:
     docker:
-        runs-on: "ubuntu-latest"
+        runs-on: "ubuntu-amd64"
         name: Docker build
         steps:
             - name: Check out the repo

@@ -1,4 +1,4 @@
-## Žádost o Změnu Projektu
+## Žádost o změnu projektu
 
 ### Název projektu:
 FlightLog
@@ -7,8 +7,7 @@ FlightLog
 Jméno: Mgr. Martin Mareš
 Datum: 30.4.2024
 
-### Název žádosti:
-#### Název: Podpora vzletu 3 kluzáků s 1 tahačem
+### Název žádosti: Podpora vzletu 3 kluzáků s 1 tahačem
 #### Číslo žádosti: 1
 
 ### Popis změny:
@@ -20,8 +19,8 @@ Dále je vyžadována úprava serverové logiky pro zpracování vzletu.
 Požadavek, že jedno tažné letadlo může vléct více než 1 kluzák, je nový a není proto součástí původní dodávky.
 
 ### Dopad změny:
- Rozpočet: 10 MD
- Plán: Plánované doručení je 1 měsíc od schválení tohoto požadavku na změnu zákazníkem
+Rozpočet: 10 MD
+Plán: Plánované doručení je 1 měsíc od schválení tohoto požadavku na změnu zákazníkem
 
 ### Analýza dopadů:
 Změna rozšíří stávající funkcionalitu.
@@ -33,6 +32,6 @@ Celkové odhadované náklady:
 - 40 000,- Kč
 
 
-#### Schvalovací podpisy:
+#### Schvalovací podpis:
 #### Schváleno: Lukáš Polák
 #### Datum: 7.5.2024

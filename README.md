@@ -10,7 +10,7 @@ Tento repozitář obsahuje zdrojové kódy k aplikaci FlightLog.
 
 Předpokládá se, že v tuto chvíli již běží Docker.
 1. Pro build Docker image je nutné použít příkaz `docker build . -t flightlog` v příkazové řádce.
-2. Pro běh serveru stačí použít příkaz `docker run -p 44313:44313 --name flightlog flightlog:latest` v příkazové řádce.
+2. Pro běh serveru stačí použít příkaz `docker run -p 44313:44313 flightlog:latest` v příkazové řádce.
 3. Aplikace běží a v prohlížeči je dostupná na adrese `http://localhost:44313`.
 
 Alternativně je možné použít pro spuštění předpřipravený skript `run_server.ps1`.

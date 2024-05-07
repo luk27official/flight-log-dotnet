@@ -1,0 +1,19 @@
+name: ci
+
+on:
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    test:
+        runs-on: "ubuntu-latest"
+        name: Test FlightLog
+        steps:
+            - uses: actions/checkout@v4
+            - name: Set up .NET
+              uses: actions/setup-dotnet@v1
+            - name: Build with .NET
+              run: dotnet build ./FlightLogDotNet.sln
+            - name: Run tests
+              run: dotnet test ./FlightLogDotNet.sln
